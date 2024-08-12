@@ -1,5 +1,5 @@
 import { useState } from 'react';
-export const LoginPage = () => {
+const LoginPage = () => {
 //Estados del formulario
 const [nombre, setNombre] = useState('');
 const [apellido, setApellido] = useState('');
@@ -35,7 +35,6 @@ value={nombre}
 <div className="form-group">
 <label>Apellido</label>
 <input
-
 type="text"
 name="apellido"
 className="form-control"

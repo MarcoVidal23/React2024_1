@@ -35,10 +35,10 @@ function App() {
       <Navbar />
       <Home />
 
-        <div className="card-grid p-3">
-          {data.map((card) => (
-            <Cartitas {...card} />
-          ))}
+      <div className="card-grid p-3">
+        {data.map((card) => (
+          <Cartitas {...card} />
+        ))}
       </div>
 
       <Footer />

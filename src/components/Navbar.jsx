@@ -5,7 +5,7 @@ export const Navbar = () => {
   const token = false;
   return (
     <>
-      <div className="fluid-container">
+      <div className="container">
         <nav className="navbar navbar-expand-lg col-md12  bg-black">
           <a className="text-light" href="#">
             <h5> Mamma Mia </h5>
@@ -15,7 +15,7 @@ export const Navbar = () => {
             data-target="#navbarNav"
             data-toggle="collapse"
           >
-            <span className="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon text-white"></span>
           </button>
 
           <div className="collapse navbar-collapse" id="navbarNav">

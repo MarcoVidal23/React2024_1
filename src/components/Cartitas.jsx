@@ -16,6 +16,7 @@ export const Cartitas= ({ img, tittle, ingredients, price, more }) => {
           </div>
         </div>
       </>
-    );
+  );
+  
 };
 export default Cartitas;

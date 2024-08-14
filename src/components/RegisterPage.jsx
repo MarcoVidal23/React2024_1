@@ -25,7 +25,7 @@ const Register = () => {
       <hr /> <h1>Registro de Usuario</h1>
       <form className="formulario" onSubmit={validarDatos}>
         {error ? <p>Todos los campos son obligatorios</p> : null}{" "}
-        {compara ? <p>Datos No coinciden</p> : null}{" "}
+        {compara ? alert ('Password  No coinciden'): null}{" "}
         <div className="form-group">
           <label>Email</label>{" "}
           <input

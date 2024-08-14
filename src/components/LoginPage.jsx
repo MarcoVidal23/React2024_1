@@ -29,7 +29,7 @@ if (contraseña !== confirma) {
     setCompara(false);
     
   };
-     <Alert severity="success">This is a success alert — check it out!</Alert>;
+     
   return (
     <>
       <hr /> <h1>Login de Usuario</h1>

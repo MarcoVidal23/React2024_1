@@ -1,8 +1,9 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+import React from "react";
 import "./App.css";
-import Navbar from "./components/Navbar";
-import Home from "./components/Home";
-import Cartitas from "./components/Cartitas";
+
+
+import LoginPage from "./components/LoginPage";
 import Footer from "./components/Footer";
 
 function App() {
@@ -32,16 +33,9 @@ function App() {
 
   return (
     <>
-      <Navbar />
-      <Home />
-
-      <div className="card-grid p-3">
-        {data.map((card) => (
-          <Cartitas {...card} />
-        ))}
-      </div>
-
-      <Footer />
+   
+      <LoginPage />
+     
     </>
   );
 }

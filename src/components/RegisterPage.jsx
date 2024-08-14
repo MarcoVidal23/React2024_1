@@ -22,7 +22,7 @@ const Register = () => {
   };
   return (
     <>
-      {" "}
+      <hr /> <h1>Registro de Usuario</h1>
       <form className="formulario" onSubmit={validarDatos}>
         {error ? <p>Todos los campos son obligatorios</p> : null}{" "}
         {compara ? <p>Datos No coinciden</p> : null}{" "}
@@ -60,7 +60,6 @@ const Register = () => {
           Enviar{" "}
         </button>{" "}
       </form>
-    
     </>
   );
 };

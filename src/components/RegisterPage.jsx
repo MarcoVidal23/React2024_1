@@ -16,11 +16,11 @@ const Register = () => {
   };
   return (
     <>
-      {" "}
+     {" "}
       <form className="formulario" onSubmit={validarDatos}>
-         {error ? <p>Todos los campos son obligatorios</p> : null} {" "}
+         {error ? <p>Todos los campos son obligatorios</p> : null}{" "}
         <div className="form-group">
-         {" "}
+          <label>Email</label>{" "}
           <input
             type="email"
             name="email"
@@ -30,10 +30,9 @@ const Register = () => {
           />
           {" "}
         </div>
-        {" "}
+       {" "}
         <div className="form-group">
-           <label>Contraseña</label>
-         {" "}
+         <label>Contraseña</label>{" "}
           <input
             type="contraseña"
             name="contraseña"
@@ -41,12 +40,11 @@ const Register = () => {
             onChange={(e) => setContraseña(e.target.value)}
             value={contraseña}
           />
-         {" "}
+          {" "}
         </div>
-     {" "}
+       {" "}
         <div className="form-group">
-           <label>ConfirmaContraseña</label>
-           {" "}
+         <label>ConfirmaContraseña</label>{" "}
           <input
             type="confirma"
             name="confirma"
@@ -54,16 +52,16 @@ const Register = () => {
             onChange={(e) => setConfirma(e.target.value)}
             value={confirma}
           />
-          {" "}
+       {" "}
         </div>
-         {" "}
+        {" "}
         <button type="submit" className="btn btn-primary">
-           Enviar  {" "}
+          Enviar {" "}
         </button>
-         {" "}
+        {" "}
       </form>
-       <hr />  <h1>Datos ingresados</h1>  {email} - {contraseña} -{" "}
-      {confirma} {" "}
+       <hr /> <h1>Datos ingresados</h1> {email} - {contraseña} -{" "}
+      {confirma}{" "}
     </>
   );
 };

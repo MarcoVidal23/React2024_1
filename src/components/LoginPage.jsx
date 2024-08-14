@@ -12,7 +12,7 @@ const validarDatos = (e) => {
 e.preventDefault();
  //Validación;
  if (!nombre.trim() || !apellido.trim() || !edad.trim() || !email.trim()) {
- setError(true);
+     setError(true);    
  return;
  }
  setError(false);

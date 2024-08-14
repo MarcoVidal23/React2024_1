@@ -35,7 +35,9 @@ function App() {
     <>
    
       <LoginPage />
-     
+      <RegisterPage />
+
+     <Footer/>
     </>
   );
 }

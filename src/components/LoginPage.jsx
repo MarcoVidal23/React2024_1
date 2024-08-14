@@ -20,7 +20,7 @@ e.preventDefault();
  return (
  <>
 <form className="formulario" onSubmit={validarDatos}>
-{error ? <p>Todos los campos son obligatorios</p> : null}
+{error ? alert ('Todos los campos son obligatorios') : null}
  <div className="form-group">
           <label>Nombre</label>
           <input
@@ -66,8 +66,8 @@ className="form-control"
  </button>
 </form>
 <hr />
- <h1>Datos ingresados</h1>
-{nombre} - {apellido} - {edad} - {email}
+
+
 </>
 );
 };

@@ -34,11 +34,10 @@ function App() {
 
   return (
     <>
-   
-     
+      <LoginPage/>
       <RegisterPage />
 
-     <Footer/>
+      <Footer />
     </>
   );
 }

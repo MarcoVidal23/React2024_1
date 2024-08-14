@@ -4,6 +4,7 @@ import "./App.css";
 
 
 import LoginPage from "./components/LoginPage";
+import RegisterPage from "./components/RegisterPage";
 import Footer from "./components/Footer";
 
 function App() {
@@ -34,7 +35,7 @@ function App() {
   return (
     <>
    
-      <LoginPage />
+     
       <RegisterPage />
 
      <Footer/>

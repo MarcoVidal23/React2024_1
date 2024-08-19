@@ -1,7 +1,8 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-
+import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+
 
 function App() {
   const data = [
@@ -30,10 +31,9 @@ function App() {
 
   return (
     <>
-     
-   
-      
-     <Footer />
+      <Navbar />
+
+      <Footer />
     </>
   );
 }

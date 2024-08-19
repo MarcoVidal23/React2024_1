@@ -1,22 +1,23 @@
 import React from "react";
-
-export const Cartitas= ({ img, tittle, ingredients, price, more }) => {
+export default fuction  Pizza({Cartitas,addToCart}) {
+const Cartitas= ({ img, tittle, ingredients, price,add,more }) => {
     return (
-      <>
-        <div className="card-flex">
-          <img src={img} className="card-img-top" alt="pizza" />
-          <div className="card-body">
-            <h5 className="card-tittle fw-ligth mb-3">Pizza {tittle}</h5>
+      
+        <div className="col-md-6 col-lg-4 my-4 row align-items-center">
+         <div className="col-4"> 
+          <img className= "img-fluid" src={img} className="card-img-top" alt="pizza" />
+          </div> 
+        <div className="col-8">
+          <h3 className="text-white fs-4 fw-bold text-uppercase">Pizza {tittle}</h3>
             <p className="card-text h6 fw-ligth">🍕{ingredients}</p>
             <ul className="list-group list-group-flush text-rigth">
               <li className="btn btn-dark font-weight-bold">Precio ${price}</li>
             </ul>
             <hr />
-            <button className="btn btn-dark">{more} 🛒</button>
+            <button type="button" className="btn btn-dark w-100" onClick={() =>addToCart(Cartitas)}> Agregar Carrito </button>
           </div>
         </div>
-      </>
-  );
-  
+      
+    );
 };
-export default Cartitas;
+};

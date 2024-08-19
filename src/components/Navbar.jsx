@@ -1,5 +1,3 @@
-import { LoginPage } from "./LoginPage";
-
 
 export const Navbar = () => {
   let total = 0;

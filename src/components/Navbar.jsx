@@ -4,8 +4,8 @@ export const Navbar = () => {
   const token = false;
   return (
     <>
-      <div className="container">
-        <nav className="navbar navbar-expand-lg col-md12  bg-black">
+      <div className="container-xl mt-5">
+        <nav className="navbar navbar-expand-xl col-md12  bg-black">
           <a className="text-light" href="#">
             <h5> Mamma Mia </h5>
           </a>
@@ -17,7 +17,7 @@ export const Navbar = () => {
             <span className="navbar-toggler-icon text-white"></span>
           </button>
 
-          <div className="collapse navbar-collapse" id="navbarNav">
+          <div className="container-xl mt-5" id="navbarNav">
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
                 <a className="nav-link text-light" href="#">
@@ -35,8 +35,11 @@ export const Navbar = () => {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="col-md-6 a mt-5 d-flex align-items-start justify-content-end" href="#">
-                 Total: $
+                <a
+                  className="col-md-6 a mt-5 d-flex align-items-start justify-content-end"
+                  href="#"
+                >
+                  Total: $
                 </a>
               </li>
             </ul>

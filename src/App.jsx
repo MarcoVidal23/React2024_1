@@ -2,6 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Cartitas from "./components/Cartitas"
 
 
 function App() {
@@ -28,12 +29,16 @@ function App() {
       more: "Agrega",
     },
   ];
-  
+
 
   return (
     <>
       <Navbar />
- 
+      <div className="card-grid p-3">
+        {data.map((card) => (
+          <Cartitas {...card} />
+        ))}
+      </div>
 
       <Footer />
     </>

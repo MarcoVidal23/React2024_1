@@ -4,46 +4,44 @@ export const Navbar = () => {
   const token = false;
   return (
     <>
-      <div className="container-xl mt-5">
-        <nav className="navbar navbar-expand-xl col-md12  bg-black">
-          <a className="text-light" href="#">
-            <h5> Mamma Mia </h5>
+      <div class="container">
+        <nav class="navbar navbar-dark bg-dark">
+          <a class="navbar-brand text-white" href="#">
+            Mamma Mia
           </a>
-          <button
-            className="navbar-toggler navbar-light"
-            data-target="#navbarNav"
-            data-toggle="collapse"
-          >
-            <span className="navbar-toggler-icon text-white"></span>
-          </button>
 
-          <div
-            className="col-md-3 a mt-5 d-flex align-items-start justify-content-end"
-            id="navbarNav"
+          <li className="navbar-nav ml-auto">
+            <a className="nav-link text-light" href="#">
+              🍕 Home
+            </a>
+          </li>
+          <li className="navbar-nav ml-auto">
+            <a className="nav-link text-light" href="#">
+              🔐 Login
+            </a>
+          </li>
+          <li className="navbar-nav ml-auto">
+            <a className="nav-link text-light" href="#">
+              🔐 Register
+            </a>
+          </li>
+          <ul class="nav justify-content-end">
+            <li className="nav-item ">
+              <a className="nav-link active" href="#">
+                🛒 Total: $
+              </a>
+            </li>
+          </ul>
+          <button
+            className="navbar-toggler "
+            data-target="#navbarToggleExternalContent"
+            data-toggle="collapse"
+            aria-controls="navbarToggleExternalContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
           >
-            <ul className="navbar-nav ml-auto">
-              <li className="nav-item">
-                <a className="nav-link text-light" href="#">
-                  🍕 Home
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link text-light" href="#">
-                  🔐 Login
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link text-light" href="#">
-                  🔐 Register
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="carrito" href="#">
-                  🛒  Total: $
-                </a>
-              </li>
-            </ul>
-          </div>
+            <span className="navbar-toggler-icon "></span>
+          </button>
         </nav>
       </div>
     </>

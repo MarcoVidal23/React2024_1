@@ -16,11 +16,11 @@ export const Header = () => {
         }}
       >
         <box>
-          <h1 className="justify-content-center   text-white font-weight-bold">
+          <h1 className="justify-content-center   text-black font-weight-bold">
             ¡Pizzeria Mamma Mia!
           </h1>
         </box>
-        <h6 className="justify-content-center  text-white font-weight-bold">
+        <h6 className="justify-content-center  text-black font-weight-bold">
           ¡Tenemos la Mejor Pizza de Chile !
         </h6>
       </div>

@@ -9,9 +9,7 @@ export const Footer = () => {
           </small>
         </footer>
 
-        <p className="text-black text-center fs-4 mt-4 m-md-0">
-          &copy; GuitarLA - Todos los derechos Reservados
-        </p>
+       
       </div>
     );
 };

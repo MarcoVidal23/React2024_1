@@ -36,7 +36,7 @@ export const Navbar = () => {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-light ml-auto" href="#">
+                <a className="col-md-6 a mt-5 d-flex align-items-start justify-content-end" href="#">
                   🛒 Total: $
                 </a>
               </li>

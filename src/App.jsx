@@ -28,11 +28,12 @@ function App() {
       more: "Agrega",
     },
   ];
+  
 
   return (
     <>
       <Navbar />
-      <Header />
+ 
 
       <Footer />
     </>

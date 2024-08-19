@@ -17,7 +17,10 @@ export const Navbar = () => {
             <span className="navbar-toggler-icon text-white"></span>
           </button>
 
-          <div className="container-xl mt-5" id="navbarNav">
+          <div
+            className="col-md-3 a mt-5 d-flex align-items-start justify-content-end"
+            id="navbarNav"
+          >
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
                 <a className="nav-link text-light" href="#">
@@ -35,11 +38,8 @@ export const Navbar = () => {
                 </a>
               </li>
               <li className="nav-item">
-                <a
-                  className="col-md-6 a mt-5 d-flex align-items-start justify-content-end"
-                  href="#"
-                >
-                  Total: $
+                <a className="carrito" href="#">
+                  🛒  Total: $
                 </a>
               </li>
             </ul>

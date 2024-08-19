@@ -1,4 +1,5 @@
-import {LoginPage} from "./LoginPage";
+import { LoginPage } from "./LoginPage";
+
 
 export const Navbar = () => {
   let total = 0;
@@ -37,7 +38,7 @@ export const Navbar = () => {
               </li>
               <li className="nav-item">
                 <a className="col-md-6 a mt-5 d-flex align-items-start justify-content-end" href="#">
-                  🛒 Total: $
+                 Total: $
                 </a>
               </li>
             </ul>

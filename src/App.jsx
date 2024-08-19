@@ -33,15 +33,9 @@ function App() {
   return (
     <>
       <Navbar />
-      <Home />{" "}
-      <div className="card-grid p-3">
-        {" "}
-        {data.map((card) => (
-          <Cartitas {...card} />
-        ))}
-        {" "}
-      </div>
-     <Footer />{" "}
+      <Home />
+      
+     <Footer />
     </>
   );
 }

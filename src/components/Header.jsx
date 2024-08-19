@@ -9,20 +9,20 @@ export const Header = () => {
           justifyContent: "center",
           textAlign: "center",
           backgroundImage: `url("/imagen/fondo-pizzeria.jpg")`,
-          backgroundRepeat: "no-repeat",
-          margin: "10px",
-          width: "75em",
+
+          margin: "0",
+          width: "100%",
           height: "20em",
         }}
       >
         <box>
-          <h1 className="justify-content-center   text-black font-weight-bold">
+          <h1 className="card-title justify-content-center   text-white font-weight-bold ">
             ¡Pizzeria Mamma Mia!
           </h1>
         </box>
-        <h6 className="justify-content-center  text-black font-weight-bold">
+        <h5 className="card-title justify-content-center   text-white font-weight-bold">
           ¡Tenemos la Mejor Pizza de Chile !
-        </h6>
+        </h5>
       </div>
     </>
   );

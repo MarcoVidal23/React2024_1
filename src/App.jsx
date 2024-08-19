@@ -1,6 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Navbar from "./components/Navbar";
+import Header from "./components/Header"
 import Footer from "./components/Footer";
 import Cartitas from "./components/Cartitas"
 
@@ -34,7 +35,9 @@ function App() {
   return (
     <>
       <Navbar />
-      <div className="card-grid p-3">
+
+      <Header />
+      <div className="card-grid p-3  m0">
         {data.map((card) => (
           <Cartitas {...card} />
         ))}

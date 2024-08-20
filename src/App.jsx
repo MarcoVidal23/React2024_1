@@ -37,7 +37,7 @@ function App() {
       <Navbar />
 
       <Header />
-      <div className="card-grid p-3  m0">
+      <div className="d-flex flex-row  flexalign-items-start gap-1 ">
         {data.map((card) => (
           <Cartitas {...card} />
         ))}

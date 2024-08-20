@@ -19,7 +19,8 @@ export const db = [
     ingredients: "pimientos cebolla oregano",
     price: "6.900",
     add: "Agrega",
-  },{
+  },
+  {
   img: "/imagen/pizza-5.png",
     tittle: "4 quesos",
     ingredients: "mozzarella roddart mantecoso orégano",

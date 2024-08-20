@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-export const Cartitas = ({ img, tittle, ingredients, price, add }) => {
+const Cartitas = ({ img, tittle, ingredients, price, add }) => {
   return (
     <>
     

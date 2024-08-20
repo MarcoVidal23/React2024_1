@@ -9,7 +9,7 @@ import { pizza } from './data/pizza';
 
 
 function App() {
-  const [data] =  useState(pizza)
+  const [dato] =  useState(pizza)
    
 
   return (
@@ -18,7 +18,7 @@ function App() {
 
       <Header />
       <div className="d-flex flex-row  flexalign-items-start gap-1 ">
-        {data.map((card) => (<Cartitas {...card} />
+        {dato.map((card) => (<Cartitas {...card} />
         ))}
       </div>
 

@@ -1,37 +1,39 @@
-
 export const Navbar = () => {
   let total = 0;
   const token = false;
   return (
     <>
-      <div class="fluid-container">
-        <nav class="navbar navbar-dark bg-dark">
-          <a class="navbar-brand text-white" href="#">
+      <div class="fluid-container ">
+        <nav class="navbar  navbar-dark bg-dark  ">
+          <h3 class="col-md-0  mt-1 " href="#">
             Mamma Mia
-          </a>
-
-          <li className="navbar-nav ml-auto">
-            <a className="nav-link text-light" href="#">
-              🍕 Home
-            </a>
-          </li>
-          <li className="navbar-nav ml-auto">
-            <a className="nav-link text-light" href="#">
-              🔐 Login
-            </a>
-          </li>
-          <li className="navbar-nav ml-auto">
-            <a className="nav-link text-light" href="#">
-              🔐 Register
-            </a>
-          </li>
-          <ul class="nav justify-content-end">
-            <li className="d-flex flex-row-reverse">
-              <a className="p2" href="#">
-                🛒 Total: $
+          </h3>
+          <ul class="nav justify-content-start">
+            <li className="navbar-nav ml-auto">
+              <a className="nav-link text-light" href="#">
+                🍕 Home
+              </a>
+            </li>
+            <li className="navbar-nav ml-auto">
+              <a className="nav-link text-light" href="#">
+                🔐 Login
+              </a>
+            </li>
+            <li className="navbar-nav ml-auto">
+              <a className="nav-link text-light" href="#">
+                🔐 Register
               </a>
             </li>
           </ul>
+          <div>
+            <ul class="nav justify-content-end">
+              <li className="navbar-nav ml-auto ">
+                <a className="nav-link text-light " href="#">
+                  🛒 Total: $
+                </a>
+              </li>
+            </ul>
+          </div>
           <button
             className="navbar-toggler "
             data-target="#navbarToggleExternalContent"

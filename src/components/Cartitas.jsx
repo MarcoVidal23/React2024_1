@@ -1,6 +1,6 @@
 import React from "react";
-
-export const Cartitas = ({ img, tittle, ingredients, price, more }) => {
+import PropTypes from "prop-types";
+export const Cartitas = ({ img, tittle, ingredients, price, add }) => {
   return (
     <>
     
@@ -15,11 +15,19 @@ export const Cartitas = ({ img, tittle, ingredients, price, more }) => {
           </div>
           <hr />
           <div>
-            <button className="btn btn-dark">{more} 🛒</button>
+            <button className="btn btn-dark">{add} 🛒</button>
           </div>
         </div>
      
     </>
   );
+
+  Cartitas.propTypes = {
+    tittle:PropTypes.string.isRequired,
+    ingredients:PropTypes.string.isRequired,
+    price:PropTypes.number.isRequired,
+    add:PropTypes.func.isRequired,
+  };
+     
 };
 export default Cartitas;

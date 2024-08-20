@@ -6,7 +6,7 @@ export const Navbar = () => {
       <div class="fluid-container ">
         <nav class="navbar  navbar-dark bg-dark  ">
           <h3 class="col-md-0  mt-1 " href="#">
-            Mamma Mia
+            Pizzeria Mamma Mia
           </h3>
           <ul class="nav justify-content-start">
             <li className="navbar-nav ml-auto">
@@ -28,9 +28,9 @@ export const Navbar = () => {
           <div>
             <ul class="nav justify-content-end">
               <li className="navbar-nav ml-auto ">
-                <a className="nav-link text-light " href="#">
+                <h3  >
                   🛒 Total: $
-                </a>
+                </h3>
               </li>
             </ul>
           </div>

@@ -17,8 +17,9 @@ function App() {
       <Navbar />
 
       <Header />
-      <div className="d-flex flex-row  flexalign-items-start gap-1 ">
-        {dato.map((card) => (<Cartitas {...card} />
+      <div className="grid-pizzas ">
+        {dato.map((card) => (
+          <Cartitas {...card} />
         ))}
       </div>
 

@@ -1,4 +1,4 @@
-export const db = [
+export const pizza = [
   {
     img: "/imagen/pizza-1.png",
     tittle: "Napolitana",

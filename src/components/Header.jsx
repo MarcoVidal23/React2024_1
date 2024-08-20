@@ -9,8 +9,7 @@ export const Header = () => {
           justifyContent: "center",
           textAlign: "center",
           backgroundImage: `url("/imagen/fondo-pizzeria.jpg")`,
-
-          margin: "0",
+          margin: "2px",
           width: "100%",
           height: "20em",
         }}

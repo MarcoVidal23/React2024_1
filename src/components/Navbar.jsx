@@ -4,7 +4,7 @@ export const Navbar = () => {
   const token = false;
   return (
     <>
-      <div class="container">
+      <div class="fluid-container">
         <nav class="navbar navbar-dark bg-dark">
           <a class="navbar-brand text-white" href="#">
             Mamma Mia
@@ -26,8 +26,8 @@ export const Navbar = () => {
             </a>
           </li>
           <ul class="nav justify-content-end">
-            <li className="nav-item ">
-              <a className="nav-link active" href="#">
+            <li className="d-flex flex-row-reverse">
+              <a className="p2" href="#">
                 🛒 Total: $
               </a>
             </li>

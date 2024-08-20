@@ -14,6 +14,13 @@ export const pizza = [
     add: "Agrega",
   },
   {
+    img: "/imagen/pizza-3.png",
+    tittle: "Española",
+    ingredients: "mozzarella gorgonzola parmesano provolone",
+    price: "6.950",
+    add: "Agrega",
+  },
+  {
     img: "/imagen/pizza-4.png",
     tittle: "Vegetariana ",
     ingredients: "pimientos cebolla oregano",
@@ -21,7 +28,7 @@ export const pizza = [
     add: "Agrega",
   },
   {
-  img: "/imagen/pizza-5.png",
+    img: "/imagen/pizza-7.png",
     tittle: "4 quesos",
     ingredients: "mozzarella roddart mantecoso orégano",
     price: "5.950",
@@ -34,5 +41,4 @@ export const pizza = [
     price: "6.950",
     add: "Agrega",
   },
- 
 ];

@@ -22,12 +22,7 @@ export const Cartitas = ({ img, tittle, ingredients, price, add }) => {
     </>
   );
 
-  Cartitas.propTypes = {
-    tittle:PropTypes.string.isRequired,
-    ingredients:PropTypes.string.isRequired,
-    price:PropTypes.number.isRequired,
-    add:PropTypes.func.isRequired,
-  };
+  
      
 };
 export default Cartitas;

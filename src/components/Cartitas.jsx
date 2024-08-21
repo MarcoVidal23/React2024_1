@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 
 
 
-function Cartitas({ id, img, tittle, ingredients, price, add, cantidad }) {
+function Cartitas({ id,img, tittle, ingredients, price, add, cantidad }) {
   return (
     <>
       <div className="row">

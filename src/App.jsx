@@ -1,6 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header"
 import Footer from "./components/Footer";
@@ -9,9 +9,29 @@ import { pizza } from './data/pizza';
 
 
 function App() {
-  const [dato] =  useState(pizza)
-   
 
+const [dato, SetDato] = useState(pizza);
+const [cart, setCart] = useState[]; 
+
+const handleAddToCart = (pizzacart) => {
+		if (cart.some((pizzaCart) => pizzaCart.id == pizzacart.id)) {
+			const update = cart.map((pizzaCart) =>
+				pizzaCart.id == pizzacart.id
+					? { ...pizzaCart, cantidad: pizzaCart.cantidad + 1 }
+					: pizzaCart
+			);
+
+			setCart(update);
+		} else {
+			setCart([...cart,
+				{     ...pizza,
+					cantidad: 1,
+				},
+			]);
+		}
+	};  
+  
+  
   return (
     <>
       <Navbar />
@@ -19,7 +39,7 @@ function App() {
       <Header />
       <div className="grid-pizzas ">
         {dato.map((card) => (
-          <Cartitas {...card} />
+         <Cartitas {...card} />
         ))}
       </div>
 

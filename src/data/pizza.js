@@ -1,6 +1,7 @@
 export const pizza = [
   {
     img: "/imagen/pizza-1.png",
+    id: 0,
     tittle: "Napolitana",
     ingredients: "mozzarella tomates jamón orégano",
     price: "5.950",
@@ -9,6 +10,7 @@ export const pizza = [
   },
   {
     img: "/imagen/pizza-2.png",
+    id: 1,
     tittle: "Pepperoni",
     ingredients: "mozzarella pepperoni champiñones parmesano",
     price: "6.950",
@@ -17,6 +19,7 @@ export const pizza = [
   },
   {
     img: "/imagen/pizza-3.png",
+    id: 2,
     tittle: "Española",
     ingredients: "mozzarella tomate jamon champiñones",
     price: "6.950",
@@ -25,6 +28,7 @@ export const pizza = [
   },
   {
     img: "/imagen/pizza-4.png",
+    id: 3,
     tittle: "Vegetariana ",
     ingredients: "pimientos cebolla oregano",
     price: "6.900",
@@ -33,6 +37,7 @@ export const pizza = [
   },
   {
     img: "/imagen/pizza-5.png",
+    id: 4,
     tittle: "Albahaca",
     ingredients: "mozzarella tomate albahaca orégano",
     price: "5.950",
@@ -41,6 +46,7 @@ export const pizza = [
   },
   {
     img: "/imagen/pizza-6.png",
+    id: 5,
     tittle: "Marguerita",
     ingredients: "mozzarella tomate aceitunas negras",
     price: "6.950",
@@ -49,6 +55,7 @@ export const pizza = [
   },
   {
     img: "/imagen/pizza-7.png",
+    id: 6,
     tittle: "4 quesos",
     ingredients: "mozzarella mantecoso provolone parmesamo oregano",
     price: "6.950",

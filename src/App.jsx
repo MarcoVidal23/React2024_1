@@ -5,13 +5,14 @@ import Navbar from "./components/Navbar";
 import Header from "./components/Header"
 import Footer from "./components/Footer";
 import Cartitas from "./components/Cartitas";
-import { pizza } from './data/pizza';
+import { pizza } from "./data/pizza";
+import { Cart } from "./components/Cart";
 
 
 function App() {
 
 const [dato, SetDato] = useState(pizza);
-const [cart, setCart] = useState[]; 
+const [cart, setCart] = useState([]); 
 
 const handleAddToCart = (pizzacart) => {
 		if (cart.some((pizzaCart) => pizzaCart.id == pizzacart.id)) {

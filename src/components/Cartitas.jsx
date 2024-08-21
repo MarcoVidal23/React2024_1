@@ -2,9 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 
 
-
-
-
 function Cartitas({ id,img, tittle, ingredients, price, add, cantidad }) {
   return (
     <>
@@ -19,7 +16,7 @@ function Cartitas({ id,img, tittle, ingredients, price, add, cantidad }) {
         </div>
         <hr />
         <div className="row">
-          <button onClick={() => addToCart({ id })} className="btn btn-dark">{add} 🛒</button>
+          <button onClick={() => cantidad} className="btn btn-dark">{add} 🛒</button>
           <p className="btn btn-dark">Cantidad: {cantidad} </p>
         </div>
       </div>

@@ -4,7 +4,7 @@ import { useState } from "react";
 
 
 export const Navbar = () => {
-  let total = { cardTotal };
+  let total = 0;
   const token = false;
   return (
     <>

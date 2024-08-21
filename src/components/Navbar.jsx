@@ -1,5 +1,10 @@
+import App from "../App";
+import { useState } from "react";
+
+
+
 export const Navbar = () => {
-  let total = 0;
+  let total = { cardTotal };
   const token = false;
   return (
     <>
@@ -28,9 +33,7 @@ export const Navbar = () => {
           <div>
             <ul class="nav justify-content-end">
               <li className="navbar-nav ml-auto ">
-                <h3  >
-                  🛒 Total: $
-                </h3>
+                <h3>🛒 Total: $</h3>
               </li>
             </ul>
           </div>

@@ -7,7 +7,7 @@ const carro = [id, cantidad, price, subtotal, total];
 function AgregaCarrito () {
 {
     carro.map(({ id }, { cantidad }, { price }, { subtotal }, { total }, i) => (
-      <Carrito key={i} id={i} cantidad={cantidad + 1} price={price} subtotal={subtotal} total={ price * catidad} />
+      <Carrito key={i} id={i} cantidad={cantidad + 1} price={price} subtotal={subtotal} total={ price * cantidad} />
     ));
     return 
 }
@@ -18,6 +18,7 @@ function Cartitas({ id,img, tittle, ingredients, price, add, cantidad }) {
       <div className="row">
         <img src={img} className="card-header" alt="pizza" />
         <div className="row">
+          <h5 className="card-tittle fw-ligth mb-3">Id {id}</h5>
           <h5 className="card-tittle fw-ligth mb-3">Pizza {tittle}</h5>
           <p className="card-text h6 fw-ligth">🍕{ingredients}</p>
           <ul className="list-group list-group-flush text-rigth">
@@ -27,7 +28,8 @@ function Cartitas({ id,img, tittle, ingredients, price, add, cantidad }) {
         <hr />
         <div className="row">
           <button onClick={() => AgregaCarrito} className="btn btn-dark">
-            {add} 🛒 </button>
+            {add} 🛒{" "}
+          </button>
           <p className="btn btn-dark">Cantidad: {cantidad} </p>
         </div>
       </div>

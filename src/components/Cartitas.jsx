@@ -1,7 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Carrito from "./Carrito";
 
 
+const carro = [id, cantidad, price, subtotal, total];
+function AgregaCarrito () {
+{
+    carro.map(({ id }, { cantidad }, { price }, { subtotal }, { total }, i) => (
+      <Carrito key={i} id={i} cantidad={cantidad + 1} price={price} subtotal={subtotal} total={ price * catidad} />
+    ));
+    return 
+}
+} 
 function Cartitas({ id,img, tittle, ingredients, price, add, cantidad }) {
   return (
     <>
@@ -16,7 +26,8 @@ function Cartitas({ id,img, tittle, ingredients, price, add, cantidad }) {
         </div>
         <hr />
         <div className="row">
-          <button onClick={() => cantidad} className="btn btn-dark">{add} 🛒</button>
+          <button onClick={() => AgregaCarrito} className="btn btn-dark">
+            {add} 🛒 </button>
           <p className="btn btn-dark">Cantidad: {cantidad} </p>
         </div>
       </div>

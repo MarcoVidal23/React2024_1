@@ -5,13 +5,13 @@ import Carrito from "./Carrito";
 
 const carro = [id, cantidad, price, subtotal, total];
 function AgregaCarrito () {
-{
+
     carro.map(({ id }, { cantidad }, { price }, { subtotal }, { total }, i) => (
       <Carrito key={i} id={i} cantidad={cantidad + 1} price={price} subtotal={subtotal} total={ price * cantidad} />
     ));
     return 
 }
-} 
+ 
 function Cartitas({ id,img, tittle, ingredients, price, add, cantidad }) {
   return (
     <>

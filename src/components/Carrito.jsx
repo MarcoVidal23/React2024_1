@@ -1,5 +1,10 @@
 import react from "react";
-export const Carrito= ({ id, cantidad ,price, subtotal,total }) => {
+import { pizza } from "../data/pizza";
+import { useState } from "react";
+
+export const [allPizza, setAllPizza] = useState(pizza);
+export const [carrito, setCarrito] = [];
+export const Carrito= ({ id, imagen ,price, cantidad,total }) => {
  return (
   <>
  

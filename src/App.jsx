@@ -8,25 +8,20 @@ import Cartitas from "./components/Cartitas";
 import { pizza } from "./data/pizza";
 
 function App() {
-const [allPizza,setAllPizza] = useState(pizza);
-  const [total, setTotal] = useState(0);
-  const [countPizza, setCountPizza] = useState(0);
+  const [allPizza,setAllPizza] = useState(pizza);
+  const [carrito, setCarrito] = [];
+
   return (
     <>
       <Navbar />
 
       <Header />
 
-      <div className="grid-pizza">
-        <Cartitas
-          allPizza={allPizza}
-          setAllPizza={setAllPizza}
-          total={total}
-          setTotal={setTotal}
-          countPizza={countPizza}
-          setCountPizza={setCountPizza } />
-      </div>
-
+      <div className="grid-pizzas ">
+        {allPizza.map((card => (
+          <Cartitas {...card} />
+        )))} 
+     </div>
       <Footer />
     </>
   );

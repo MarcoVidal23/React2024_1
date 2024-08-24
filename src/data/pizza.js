@@ -55,7 +55,7 @@ export const pizza = [
   },
   {
     id: "6",
-    img: "/imagen/pizza- 7.png",
+    img: "/imagen/pizza-7.png",
     tittle: "4 quesos",
     ingredients: "mozzarella mantecoso provolone parmesamo oregano",
     price: "6.950",

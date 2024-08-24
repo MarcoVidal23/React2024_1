@@ -8,8 +8,9 @@ import Cartitas from "./components/Cartitas";
 import { pizza } from "./data/pizza";
 
 function App() {
-const [dato,setDato] = useState(pizza);
-
+const [allPizza,setAllPizza] = useState(pizza);
+  const [total, setTotal] = useState(0);
+  const [countPizza, setCountPizza] = useState(0);
   return (
     <>
       <Navbar />
@@ -17,10 +18,13 @@ const [dato,setDato] = useState(pizza);
       <Header />
 
       <div className="grid-pizza">
-        {dato.map((card) => (
-          <Cartitas
-            {...card} />
-        ))}
+        <Cartitas
+          allPizza={allPizza}
+          setAllPizza={setAllPizza}
+          total={total}
+          setTotal={setTotal}
+          countPizza={countPizza}
+          setCountPizza={setCountPizza } />
       </div>
 
       <Footer />

@@ -9,7 +9,7 @@ export const Navbar = () => {
   return (
     <>
       <div class="fluid-container ">
-        <nav class="navbar  navbar-dark bg-dark  ">
+        <nav class="navbar  navbar-dark bg-dark">
           <h3 class="col-md-0  mt-1 " href="#">
             Pizzeria Mamma Mia
           </h3>
@@ -30,13 +30,15 @@ export const Navbar = () => {
               </a>
             </li>
           </ul>
-          <div>
-            <ul class="nav justify-content-end">
-              <li className="navbar-nav ml-auto ">
-                <h3>🛒 Total: $</h3>
-              </li>
-            </ul>
-          </div>
+          <ul class="badge bg-secondary col-md-0  mt-0">
+            <li className="navbar  navbar-dark bg-dark  ">
+              <button class="btn btn-secondary btn-lg">
+                <h3>
+                  Ver Carrito 🛒
+                </h3>
+              </button>
+            </li>
+          </ul>
           <button
             className="navbar-toggler "
             data-target="#navbarToggleExternalContent"

@@ -10,7 +10,7 @@ export const Navbar = () => {
     <>
       <div className="fluid-container ">
         <nav className="navbar  navbar-dark bg-dark  ">
-          <h3 className="col-md-0  mt-1 " href="#">
+          <h3 class="col-md-0  mt-1 " href="#">
             Pizzeria Mamma Mia
           </h3>
           <ul className="nav justify-content-start">
@@ -31,7 +31,7 @@ export const Navbar = () => {
             </li>
           </ul>
           <div>
-            <ul className="nav justify-content-end">
+            <ul class="nav justify-content-end">
               <li className="navbar-nav ml-auto ">
                 <h3>🛒 Total: $</h3>
               </li>

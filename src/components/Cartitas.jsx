@@ -1,8 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { useState } from "react";
 
 
-function Cartitas({ id,img, tittle, ingredients, price, add, cantidad }) {
+
+export const [carrito, setCarrito] = [];
+
+
+export const  Cartitas =({ id, img, tittle, ingredients, price, add, cantidad })=> {
   return (
     <>
       <div className="row">
@@ -16,14 +21,13 @@ function Cartitas({ id,img, tittle, ingredients, price, add, cantidad }) {
         </div>
         <hr />
         <div className="row">
-          <button onClick={() => cantidad} className="btn btn-dark">{add} 🛒</button>
+          <button className="btn btn-dark">{more} 🛒</button>
+          <button className="btn btn-dark"> {add} 🛒 </button>
+
           <p className="btn btn-dark">Cantidad: {cantidad} </p>
         </div>
       </div>
     </>
   );
-
-
-
 }
 export default Cartitas;

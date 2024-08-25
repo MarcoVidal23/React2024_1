@@ -8,13 +8,9 @@ import Cartitas from "./components/Cartitas";
 import { pizza } from "./data/pizza";
 
 function App() {
-<<<<<<< HEAD
-const [dato] = useState(pizza);
-=======
   const [dato] = useState(pizza);
 
 
->>>>>>> 1971b5bb23f5707e9abb62446c47ec1b8f4560ac
   return (
     <>
       <Navbar />
@@ -23,12 +19,7 @@ const [dato] = useState(pizza);
 
       <div className="grid-pizza">
         {dato.map((card) => (
-<<<<<<< HEAD
-          <Cartitas
-            {...card} key={card.id} />
-=======
           <Cartitas {...card} />
->>>>>>> 1971b5bb23f5707e9abb62446c47ec1b8f4560ac
         ))}
       </div>
       <Footer />

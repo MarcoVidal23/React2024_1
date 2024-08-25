@@ -7,8 +7,6 @@ import Footer from "./components/Footer";
 import Cartitas from "./components/Cartitas";
 import { pizza } from "./data/pizza";
 
-function App() {
-  const [dato] = useState(pizza);
 
 
   return (

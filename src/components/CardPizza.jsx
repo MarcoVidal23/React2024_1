@@ -1,13 +1,7 @@
-import React from "react";
 import PropTypes from "prop-types";
-import { useState } from "react";
+import React, { useState } from "react";
 
-
-
-export const [carrito, setCarrito] = [];
-
-
-export const  Cartitas =({ id, img, tittle, ingredients, price, add, cantidad })=> {
+export const  CardPizza =({ id, img, tittle, ingredients, price, add, cantidad })=> {
   return (
     <>
       <div className="row">
@@ -21,8 +15,7 @@ export const  Cartitas =({ id, img, tittle, ingredients, price, add, cantidad })
         </div>
         <hr />
         <div className="row">
-          <button className="btn btn-dark">{more} 🛒</button>
-          <button className="btn btn-dark"> {add} 🛒 </button>
+                   <button className="btn btn-dark"> {add} 🛒 </button>
 
           <p className="btn btn-dark">Cantidad: {cantidad} </p>
         </div>
@@ -30,4 +23,4 @@ export const  Cartitas =({ id, img, tittle, ingredients, price, add, cantidad })
     </>
   );
 }
-export default Cartitas;
+export default CardPizza;

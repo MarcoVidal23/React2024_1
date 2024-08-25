@@ -1,14 +1,17 @@
 import "bootstrap/dist/css/bootstrap.min.css";
+import React, { useState } from 'react';
 import "./App.css";
-import useState from "react";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Cartitas from "./components/Cartitas";
+import CardPizza from "./components/CardPizza";
+import Carrito from "./components/Carrito";
 import { pizza } from "./data/pizza";
 
 
 
+function App() {
+const [dato,setDato] = useState(pizza);  
   return (
     <>
       <Navbar />
@@ -17,9 +20,10 @@ import { pizza } from "./data/pizza";
 
       <div className="grid-pizza">
         {dato.map((card) => (
-          <Cartitas {...card} key={ dato.id} />
+          <Cartitas {...card} key={card.id} />
         ))}
       </div>
+     
       <Footer />
     </>
   );

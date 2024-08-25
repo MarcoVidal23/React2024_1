@@ -19,7 +19,7 @@ function App() {
 
       <div className="grid-pizza">
         {dato.map((card) => (
-          <Cartitas {...card} />
+          <Cartitas {...card} key={ dato.id} />
         ))}
       </div>
       <Footer />

@@ -23,7 +23,7 @@ const Register = () => {
       <form className="formulario" onSubmit={validarDatos}>
         {error ? alert("Todos los campos son obligatorios") : null}
         <div className="form-group">
-                    <label>Nombre</label>         {" "}
+          <label>Nombre</label>
           <input
             type="text"
             name="nombre"

@@ -8,12 +8,12 @@ export const Navbar = () => {
   const token = false;
   return (
     <>
-      <div class="fluid-container ">
-        <nav class="navbar  navbar-dark bg-dark  ">
-          <h3 class="col-md-0  mt-1 " href="#">
+      <div className="fluid-container ">
+        <nav className="navbar  navbar-dark bg-dark  ">
+          <h3 className="col-md-0  mt-1 " href="#">
             Pizzeria Mamma Mia
           </h3>
-          <ul class="nav justify-content-start">
+          <ul className="nav justify-content-start">
             <li className="navbar-nav ml-auto">
               <a className="nav-link text-light" href="#">
                 🍕 Home
@@ -31,7 +31,7 @@ export const Navbar = () => {
             </li>
           </ul>
           <div>
-            <ul class="nav justify-content-end">
+            <ul className="nav justify-content-end">
               <li className="navbar-nav ml-auto ">
                 <h3>🛒 Total: $</h3>
               </li>

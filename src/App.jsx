@@ -20,8 +20,7 @@ const MIN_ITEMS = 1;
 const MAX_ITEMS = 5;
 
 useEffect(() => {
-  localStorage.setItem("cart", JSON.stringify(cart));
-}, [cart]);  
+  localStorage.setItem("cart", JSON.stringify(cart));}, [cart]);  
 
   function addToCart(item) {
     const itemExists = cart.findIndex((carro) => carro.id === item.id)
@@ -41,7 +40,7 @@ useEffect(() => {
 
   function decreaseQuantity(id) {
     const updatedCart = cart.map((item) => {
-      if (item.id === id && item.cantidad > MIN_ITEMS) {
+      if (item.id === id && item.cantidad > 0 ) {
         return {
           ...item,
           cantidad: item.cantidad - 1,
@@ -54,10 +53,10 @@ useEffect(() => {
 
   function increaseQuantity(id) {
     const updatedCart = cart.map((item) => {
-      if (item.id === id && item.cantidad < MAX_ITEMS) {
+      if (item.id === id && item.cantidad >= 0) {
         return {
           ...item,
-          quantity: item.cantidad + 1,
+          cantidad: item.cantidad + 1,
         };
       }
       return item;

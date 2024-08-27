@@ -9,21 +9,87 @@ import Carrito from "./components/Carrito";
 import { pizza } from "./data/pizza";
 
 
-
 function App() {
-const [dato,setDato] = useState(pizza);  
+const initialCart = () => {
+  const localStorageCart = localStorage.getItem("cart");
+  return localStorageCart ? JSON.parse(localStorageCart) : [];
+};
+
+  const [dato, setDato] = useState(pizza); 
+ const [cart, setCart] = useState(initialCart);
+const MIN_ITEMS = 1;
+const MAX_ITEMS = 5;
+
+useEffect(() => {
+  localStorage.setItem("cart", JSON.stringify(cart));
+}, [cart]);  
+
+  function addToCart(item) {
+    const itemExists = cart.findIndex((carro) => carro.id === item.id)
+    if (itemExists >= 0) {
+      const updatedCart = [...cart]
+      updatedCart[itemExists].cantidad++
+      setCart(updatedCart)
+    } else {
+      item.cantidad =1
+      setCart([...cart, item])
+    }
+      
+  }
+  function removeFromCart(id) {
+    setCart((prevCart) => prevCart.filter((carro) => carro.id !== id));
+  }
+
+  function decreaseQuantity(id) {
+    const updatedCart = cart.map((item) => {
+      if (item.id === id && item.cantidad > MIN_ITEMS) {
+        return {
+          ...item,
+          cantidad: item.cantidad - 1,
+        };
+      }
+      return item;
+    });
+    setCart(updatedCart);
+  }
+
+  function increaseQuantity(id) {
+    const updatedCart = cart.map((item) => {
+      if (item.id === id && item.cantidad < MAX_ITEMS) {
+        return {
+          ...item,
+          quantity: item.cantidad + 1,
+        };
+      }
+      return item;
+    });
+    setCart(updatedCart);
+  }
+
+  function clearCart(e) {
+    setCart([]);
+  }
+
+
+    
   return (
     <>
-      <Navbar />
+      <Navbar
+        cart={cart}
+        removeFromCart={removeFromCart}
+        decreaseQuantity={decreaseQuantity}
+        increaseQuantity={increaseQuantity}
+        clearCart={clearCart}
+      />
 
       <Header />
 
       <div className="grid-pizza">
         {dato.map((card) => (
-          <Cartitas {...card} key={card.id} />
+          <CardPizza key={card.id} card={card} setCart={setCart} addToCart={addToCart} />
         ))}
       </div>
-     
+
       <Footer />
     </>
   );

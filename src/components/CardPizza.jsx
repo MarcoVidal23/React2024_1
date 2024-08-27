@@ -1,8 +1,10 @@
 import PropTypes from "prop-types";
 import React, { useState } from "react";
 
-export const  CardPizza =({ id, img, tittle, ingredients, price, add, cantidad })=> {
-  return (
+export default function Cardpizza({card,addToCart}) {
+  const  { id, img, tittle, ingredients, price, add } = card 
+  
+   return (
     <>
       <div className="row">
         <img src={img} className="card-header" alt="pizza" />
@@ -15,12 +17,9 @@ export const  CardPizza =({ id, img, tittle, ingredients, price, add, cantidad }
         </div>
         <hr />
         <div className="row">
-                   <button className="btn btn-dark"> {add} 🛒 </button>
-
-          <p className="btn btn-dark">Cantidad: {cantidad} </p>
-        </div>
+                   <button className="btn btn-dark"  onClick={()=>addToCart(card)}> {add} 🛒 </button>
+       </div>
       </div>
     </>
   );
 }
-export default CardPizza;

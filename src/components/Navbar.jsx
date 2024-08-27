@@ -1,15 +1,14 @@
-import App from "../App";
-import { useState } from "react";
+import { useMemo } from "react";
 
 
 
-export const Navbar = () => {
-  let total = 0;
-  const token = false;
+export default function Navbar({ cart, removeFromCart, decreaseQuantity, increaseQuantity, clearCart }) {
+  const isEmpty = useMemo(() => cart.length === 0, [cart]);
+  const cartTotal = useMemo(() => cart.reduce((total, item) => total + (item.cantidad * item.price), 0), [cart]);
   return (
     <>
       <div className="fluid-container ">
-        <nav className="navbar  navbar-dark bg-dark  ">
+        <nav className="navbar  navbar-dark bg-dark">
           <h3 className="col-md-0  mt-1 " href="#">
             Pizzeria Mamma Mia
           </h3>
@@ -30,15 +29,11 @@ export const Navbar = () => {
               </a>
             </li>
           </ul>
-          <div>
-            <ul className="nav justify-content-end">
-              <li className="navbar-nav ml-auto ">
-                <h3>🛒 Total: $</h3>
-              </li>
-            </ul>
+          <div className="carrito">
+            <img className="img-fluid" src="imagen/carrito.png" alt="" />
           </div>
           <button
-            className="navbar-toggler "
+            className="navbar-toggler"
             data-target="#navbarToggleExternalContent"
             data-toggle="collapse"
             aria-controls="navbarToggleExternalContent"
@@ -47,9 +42,78 @@ export const Navbar = () => {
           >
             <span className="navbar-toggler-icon "></span>
           </button>
-        </nav>
-      </div>
-    </>
-  );
-};
-export default Navbar;
+          </nav>
+        </div>
+      <div id="carrito" className="bg-white p-3">
+        {cart.length === 0 ? (<p className="text-center">El carrito esta vacio</p>)
+          : (
+      <>
+            <table className="w-100 table">
+              <thead>
+                <tr>
+                  <th>Imagen</th>
+                  <th>Nombre</th>
+                  <th>Precio</th>
+                  <th>Cantidad</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                {cart.map(carro => (
+                  <tr key={carro.id}>
+                    <td>
+                      <img
+                        className="img-fluid"
+                        src={`/imagen/${carro.imagen}.png`}
+                        alt="imagen carrito"
+                      />
+                    </td>
+                    <td>{carro.tittle}</td>
+                    <td className="fw-bold">${carro.price}</td>
+                    <td className="flex align-items-start gap-4">
+                      <button
+                        type="button"
+                        className="btn btn-dark"
+                        onClick={() => decreaseQuantity(carro.id)}
+                      >
+                        -
+                      </button>
+                      {carro.cantidad}
+                      <button
+                        type="button"
+                        className="btn btn-dark"
+                        onClick={() => increaseQuantity(carro.id)}
+                      >
+                        +
+                      </button>
+                    </td>
+                    <td>
+                      <button
+                        className="btn btn-danger"
+                        type="button"
+                        onClick={() => removeFromCart(carro.id)}
+                      >
+                        X
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+              </table>
+              <p className="text-end">Total pagar: <span className="fw-bold">${cartTotal}</span></p>
+      </>
+          )}
+                                <button 
+                                    className="btn btn-dark w-100 mt-3 p-2"
+                                    onClick={clearCart}
+                                >Vaciar Carrito
+                                </button>
+    </div> 
+    
+    
+
+    
+
+        
+      
+  

@@ -5,7 +5,6 @@ import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import CardPizza from "./components/CardPizza";
-import Carrito from "./components/Carrito";
 import { pizza } from "./data/pizza";
 
 

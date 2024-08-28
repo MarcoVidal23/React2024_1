@@ -88,6 +88,7 @@ useEffect(() => {
         ))}
       </div>
 
+    
       <Footer />
     </>
   );

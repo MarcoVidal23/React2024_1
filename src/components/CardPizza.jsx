@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Cartitas= ({ img, tittle, ingredients, price, more }) => {
+export const CardPizza= ({ img, tittle, ingredients, price, more }) => {
     return (
       <>
         <div className="card-flex">
@@ -19,4 +19,4 @@ export const Cartitas= ({ img, tittle, ingredients, price, more }) => {
   );
   
 };
-export default Cartitas;
+export default CardPizza;

@@ -4,30 +4,30 @@ const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [contraseña, setContraseña] = useState("");
   const [confirma, setConfirma] = useState("");
-   
+
   const validarDatos = (e) => {
     e.preventDefault(); //Validación;
     if (!email.trim() || !contraseña.trim() || !confirma.trim()) {
-     alert("Todos los campos son obligatorios");
+      alert("Todos los campos son obligatorios");
       return;
     }
-  
-    if (contraseña.length < 6) {
-    alert("Contraseña Debe tener al menos 6 caracteres");
-      return;
-    }
-  if (!email.includes("@")) {
-    alert(" Campo email No tiene formato de correo");
-    return;
-  }
 
-if (contraseña !== confirma) {
-    alert("Contraseña Deben ser iguales");
+    if (contraseña.length < 6) {
+      alert("Contraseña Debe tener al menos 6 caracteres");
+      return;
+    }
+    if (!email.includes("@")) {
+      alert(" Campo email No tiene formato de correo");
+      return;
+    }
+
+    if (contraseña !== confirma) {
+      alert("Contraseña Deben ser iguales");
       return;
     }
     alert(" LOGIN ESTA CORRECTO");
   };
-     
+
   return (
     <>
       <hr /> <h1>Login de Usuario</h1>

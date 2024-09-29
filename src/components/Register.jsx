@@ -1,27 +1,34 @@
 import { useState } from "react";
-const Register = () => {
+function Register () {
   //Estados del formulario
   const [nombre, setNombre] = useState("");
   const [apellido, setApellido] = useState("");
   const [edad, setEdad] = useState("");
   const [email, setEmail] = useState("");
   //Estado para los errores
-  const [error, setError] = useState(false);
+  const [registro, setRegistro] = useState(false);
   //Función antes de enviar el formulario
+
   const validarDatos = (e) => {
     e.preventDefault();
     //Validación;
     if (!nombre.trim() || !apellido.trim() || !edad.trim() || !email.trim()) {
-      setError(true);
+     alert("Todos los campos son obligatorios");
       return;
     }
-    setError(false);
+    if (!email.includes("@")) {
+      alert(" Campo email No tiene formato de correo");
+     return
+    }
+    alert(" INGRESO VALIDADO ESTA CORRECTO");
+    setRegistro(true)
   };
   return (
     <>
+  { !registro ?
+        <>
       <hr /> <h1>Registro de Usuario</h1>
-      <form className="formulario" onSubmit={validarDatos}>
-        {error ? alert("Todos los campos son obligatorios") : null}
+      <form className="formulario">
         <div className="form-group">
           <label>Nombre</label>
           <input
@@ -62,12 +69,19 @@ const Register = () => {
             value={email}
           />
         </div>
-        <button type="submit" className="btn btn-primary">
+        <button
+          type="submit"
+          className="btn btn-primary"
+          onClick={validarDatos}
+        >
           Enviar
         </button>
       </form>
       <hr />
+        </> : <p> <h3>Usuario Registrado:</h3>{nombre } </p>
+  }
     </>
+    
   );
 };
 export default Register;

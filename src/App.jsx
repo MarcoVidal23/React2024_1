@@ -12,13 +12,9 @@ function App() {
     
   return (
     <>
-    
-
-    
+      <Register />
 
       <LoginPage />
-
-      <Register />
 
       <Footer />
     </>

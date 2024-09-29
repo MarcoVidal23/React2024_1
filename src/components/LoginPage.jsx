@@ -34,42 +34,42 @@ if (contraseña !== confirma) {
     <>
       <hr /> <h1>Login de Usuario</h1>
       <form className="formulario" onSubmit={validarDatos}>
-        {error ? alert(" Todos los campos son obligatorios") : null}{" "}
-        {compara ? alert("Password  No coinciden") : null}{" "}
-        {cantreg ? alert("Contraseña tiene menos de 6 caracteres") : null}{" "}
+        {error ? alert(" Todos los campos son obligatorios") : null}
+        {compara ? alert("Password  No coinciden") : null}
+        {cantreg ? alert("Contraseña tiene menos de 6 caracteres") : null}
         <div className="form-group">
-          <label>Email</label>{" "}
+          <label>Email</label>
           <input
             type="email"
             name="email"
             className="form-control"
             onChange={(e) => setEmail(e.target.value)}
             value={email}
-          />{" "}
-        </div>{" "}
+          />
+        </div>
         <div className="form-group">
-          <label>Contraseña</label>{" "}
+          <label>Contraseña</label>
           <input
             type="contraseña"
             name="contraseña"
             className="form-control"
             onChange={(e) => setContraseña(e.target.value)}
             value={contraseña}
-          />{" "}
-        </div>{" "}
+          />
+        </div>
         <div className="form-group">
-          <label>ConfirmaContraseña</label>{" "}
+          <label>ConfirmaContraseña</label>
           <input
             type="confirma"
             name="confirma"
             className="form-control"
             onChange={(e) => setConfirma(e.target.value)}
             value={confirma}
-          />{" "}
-        </div>{" "}
+          />
+        </div>
         <button type="submit" className="btn btn-primary">
-          Enviar{" "}
-        </button>{" "}
+          Enviar
+        </button>
       </form>
     </>
   );

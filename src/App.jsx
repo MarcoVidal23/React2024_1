@@ -1,11 +1,9 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useState,useEffect } from 'react';
 import "./App.css";
-import Navbar from "./components/Navbar";
-import Header from "./components/Header";
 import Footer from "./components/Footer";
-import CardPizza from "./components/CardPizza";
-import { pizza } from "./data/pizza";
+import LoginPage from "./components/LoginPage";
+import Register from "./components/Register";
 
 
 function App() {
@@ -71,23 +69,10 @@ useEffect(() => {
     
   return (
     <>
-      <Navbar
-        cart={cart}
-        removeFromCart={removeFromCart}
-        decreaseQuantity={decreaseQuantity}
-        increaseQuantity={increaseQuantity}
-        clearCart={clearCart}
-      />
+      <Register />
 
-      <Header />
+      <LoginPage />
 
-      <div className="grid-pizza">
-        {dato.map((card) => (
-          <CardPizza key={card.id} card={card} setCart={setCart} addToCart={addToCart} />
-        ))}
-      </div>
-
-    
       <Footer />
     </>
   );
